@@ -10,7 +10,7 @@ import Node
 # Função que retorna o dicionário de frequencias em ordem crescente de frequencia
 # O dicionario {'a' : 10, 'b' : 5, 'c' : 7} e retornado como [('b', 5), ('c', 7), ('a', 10)]
 def ordenaFreq(dictFrequencia : dict):
-    return sorted(dictFrequencia.items(), key=lambda x:x[1], reverse=True)
+    return sorted(dictFrequencia.items(), key=lambda x:x[1])
 
 # Funcao que cria a arvore de huffman com as ordens
 def huffmanTree(dictFrequencia : dict):
@@ -66,9 +66,10 @@ def huffman(dictFrequencia : dict):
     dictResultado = dictFrequencia.copy()
 
     # Adicionando espaços e quebra de linha com maior prioridade
+    
     dictFrequencia['\n'] = 1
     dictFrequencia[' '] = 1
-
+    
     # Criando a arvore que sera o resultado
     raizArvore = huffmanTree(dictFrequencia)
 

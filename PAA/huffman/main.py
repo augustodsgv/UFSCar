@@ -67,9 +67,9 @@ freqEng = {
 texto = 'o rato roeu a roupa do rei de roma o rato roeu a roupa do rei de roma o rato roeu a roupa do rei de roma'
 arrayTexto = list(texto)
 
-
 arrayNormal, stringNormal = huffman.compactaNormal(arrayTexto)
 arrayHuffman, stringHuffman = huffman.compactaHuffman(arrayTexto, freqPort)
+
 
 print(f'Tamanho do normal {len(stringNormal)}, string : {stringNormal}')
 print(f'Tamanho do huffman {len(stringHuffman)}, string : {stringHuffman}')
